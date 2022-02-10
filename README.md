@@ -1,7 +1,7 @@
 # MBRL4FIN
 
 ### setup:
-download and decompress data into ./datasets
+download [data](https://drive.google.com/file/d/18QHvs9nWj8GsZDa6-l56zr7GIBx4G-bg/view?usp=sharing) and decompress it into "./datasets"
 pip install -r requirements.txt
 
 ### run:
