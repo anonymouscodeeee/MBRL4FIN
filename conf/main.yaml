@@ -1,0 +1,54 @@
+defaults:
+  - algorithm: mbpo
+  - dynamics_model: gaussian_mlp_ensemble
+  - overrides: mbpo_fin
+  - action_optimizer: cem
+  - market: sp  
+
+seed: 0
+device: "cpu"
+log_frequency_agent: 1000
+debug_mode: false
+
+bottom_select: true #选择换手率最低的股票作为交易对象，否则为换手率最高的
+
+restore:
+  test_only: false #当true只进行evaluate
+  checkpoint: none
+
+
+#data
+stock_num : 30
+dates:
+  start_date: "2000-01-01"
+  end_date: "2021-09-01"
+  train_start: "2009-01-01"
+  train_end: "2016-07-04" #2017-12-30
+  val_start: "2016-07-04" #2017-12-30
+  val_end: "2018-07-04"
+  test_start: "2018-07-04"
+  test_end: "2021-07-03"
+
+#env
+env:
+  hmax: 100
+  initial_amount: 1000000
+  buy_cost_pct: 0.001
+  sell_cost_pct: 0.001
+  reward_scaling: 1e-4
+  print_verbosity: 5
+  day: 0
+  iteration: 10
+  use_rsrs: false
+
+
+
+experiment: default
+
+output_dir: "./outputs"
+run_dir: ${output_dir}/${now:%Y-%m-%d}/${algorithm.name}_${market.name}/${now:%H:%M:%S:%f}
+hydra:
+  run:
+    dir: ${run_dir}
+  sweep:
+    dir: ${run_dir}

@@ -1,0 +1,56 @@
+# @package _group_
+name: "dow"
+id: 0
+
+tech_indicators: [
+    "macd",
+    "boll_ub",
+    "boll_lb",
+    "rsi_30",
+    "cci_30",
+    "dx_30",
+    "close_30_sma",
+    "close_60_sma",
+]
+
+#rsrs
+rs_N: 10
+rs_M: 300
+rs_sell: -0.7
+rs_buy: 1.8
+rs_start_date: "2005-01-01"
+
+tickers : [
+    "AAPL",
+    "MSFT",
+    "JPM",
+    "V",
+    "RTX",
+    "PG",
+    "GS",
+    "NKE",
+    "DIS",
+    "AXP",
+    "HD",
+    "INTC",
+    "WMT",
+    "IBM",
+    "MRK",
+    "UNH",
+    "KO",
+    "CAT",
+    "TRV",
+    "JNJ",
+    "CVX",
+    "MCD",
+    "VZ",
+    "CSCO",
+    "XOM",
+    "BA",
+    "MMM",
+    "PFE",
+    "WBA",
+    "DD",
+]
+
+

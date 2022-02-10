@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+checkpoint
+
+__pypackages__/
+
+.vscode
+outputs
+.hydra
+datasets
+scripts

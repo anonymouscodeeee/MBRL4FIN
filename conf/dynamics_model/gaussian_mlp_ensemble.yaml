@@ -1,0 +1,17 @@
+# @package _group_
+model:
+  _target_: gaussian_mlp.GaussianMLP
+  device: ${device}
+  num_layers: 7
+  in_size: ???
+  out_size: ???
+  ensemble_size: 7
+  hid_size: 256 #尝试改为128,64
+  use_silu: true
+  deterministic: false
+  propagation_method: expectation # None, random_model, expectation, fixed_model, mask  
+  learn_logvar_bounds: false  # so far this works better
+  min_mask_ratio: 0.5
+  
+mask_penalty: 0.000000000001
+mask_mode: nonstop #nonstop, hardstop
